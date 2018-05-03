@@ -4,6 +4,6 @@ init:
 
 test_script:
 - sh: ROOTFILES="$(find $HOME -user root)"
-- sh: if [[ -n "$ROOTFILES" ]]; then echo "found root owned files!"; echo -n "$ROOTFILES"; return 1; fi
+- sh: if [[ -n "$ROOTFILES" ]]; then echo "found root owned files!"; echo -n "$ROOTFILES"; echo; return 1; fi
 
 build: off
