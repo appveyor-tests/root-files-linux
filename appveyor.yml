@@ -4,6 +4,7 @@ init:
 - sh: echo $APPVEYOR_BUILD_WORKER_CLOUD
 
 test_script:
+- sh: df -h
 - sh: ROOTFILES="$(find $HOME -user root)"
 - sh: if [[ -n "$ROOTFILES" ]]; then echo "found root owned files!"; echo -n "$ROOTFILES"; echo; return 1; fi
 
